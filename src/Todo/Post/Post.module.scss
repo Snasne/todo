@@ -1,0 +1,92 @@
+.wrapper {
+    width: 100%; height: fit-content;
+    display: flex; justify-content: center; align-items: center;
+    margin: 10px 25px;
+    margin-right: 50px;
+    .container {
+        width: fit-content; height: fit-content;
+        display: flex; justify-content: center; align-items: flex-start; flex-flow: column nowrap;
+        .container__body {
+            display: flex; justify-content: center; align-items: center;
+            .circle {
+                width: 43px; height: 43px;
+                border-radius: 50%; border: 2px solid rgba($color: #BF56FF, $alpha: 0.72);
+                background: linear-gradient(90deg, rgba(230,0,250,1) 0%, rgba(82,97,234,0) 100%);
+                cursor: pointer;
+                transition: 0.3s;
+                .image__circle {
+                    width: 100%; height: 100%;
+                    background-image: url(../Assets/Check.png); background-repeat: no-repeat; background-size: 20px 15px; background-position: top 50% right 50%;
+                    transition: 0.3s;
+                }
+            }
+            .containerText {
+                color: white;
+                transition: 0.3s;
+                h1 {
+                    margin-left: 20px;
+                    font-size: 36px; font-weight: lighter;
+                }
+            }
+        }
+        .container__horizontalLine {
+            width: 450px; height: 4px; 
+            background-color: rgba($color: #484040, $alpha: 0.37);
+            margin-top: 10px;
+            margin-left: 43px;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .wrapper {
+        margin: 0;
+        margin-top: 10px;
+        .container {
+            .container__body {
+                display: flex; justify-content: flex-start; align-items: center;
+            }
+            .container__horizontalLine {
+                width: 450px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .wrapper {
+        .container {
+            .container__body {
+                .containerText {
+                    h1 {
+                        margin-left: 10px;
+                        font-size: 26px;
+                    }
+                }
+            }
+            .container__horizontalLine {
+                width: 70vw;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .wrapper {
+        .container {
+            .container__body {
+                .circle {
+                    width: 25px; height: 25px;
+                    .image__circle {
+                        background-size: 15px 10px;
+                    }
+                }
+                .containerText {
+                    h1 {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+}

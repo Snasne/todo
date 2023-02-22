@@ -1,0 +1,19 @@
+.wrapper {
+    width: 100%; height: fit-content;
+    display: flex; justify-content: flex-start; align-items: center;
+    .container {
+        width: fit-content; height: fit-content;
+        margin: 20px 40px;
+        h1 {
+            font-size: 96px; 
+            color: white;
+            font-weight: lighter;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .wrapper {
+        justify-content: center;
+    }
+}
